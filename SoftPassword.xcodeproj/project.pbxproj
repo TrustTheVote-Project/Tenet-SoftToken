@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79480E2E19A4708400896957 /* PreferencesWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79480E2C19A4708400896957 /* PreferencesWindow.m */; };
+		79480E2F19A4708400896957 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79480E2D19A4708400896957 /* PreferencesWindow.xib */; };
 		7964C8E0199B90750062E8A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7964C8DF199B90750062E8A7 /* main.m */; };
 		7964C8E3199B90750062E8A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7964C8E2199B90750062E8A7 /* AppDelegate.m */; };
 		7964C8E5199B90750062E8A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7964C8E4199B90750062E8A7 /* Images.xcassets */; };
@@ -48,6 +50,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		79480E2B19A4708400896957 /* PreferencesWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesWindow.h; path = ../PreferencesWindow.h; sourceTree = "<group>"; };
+		79480E2C19A4708400896957 /* PreferencesWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesWindow.m; path = ../PreferencesWindow.m; sourceTree = "<group>"; };
+		79480E2D19A4708400896957 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesWindow.xib; path = ../PreferencesWindow.xib; sourceTree = "<group>"; };
 		7964C8DA199B90750062E8A7 /* SoftPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7964C8DE199B90750062E8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7964C8DF199B90750062E8A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 			children = (
 				7964C8E1199B90750062E8A7 /* AppDelegate.h */,
 				7964C8E2199B90750062E8A7 /* AppDelegate.m */,
+				79480E2B19A4708400896957 /* PreferencesWindow.h */,
+				79480E2C19A4708400896957 /* PreferencesWindow.m */,
+				79480E2D19A4708400896957 /* PreferencesWindow.xib */,
 				7964C8E4199B90750062E8A7 /* Images.xcassets */,
 				7964C8E6199B90750062E8A7 /* MainMenu.xib */,
 				7964C8DD199B90750062E8A7 /* Supporting Files */,
@@ -220,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7964C8E5199B90750062E8A7 /* Images.xcassets in Resources */,
+				79480E2F19A4708400896957 /* PreferencesWindow.xib in Resources */,
 				7964C8E8199B90750062E8A7 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			files = (
 				7964C8E3199B90750062E8A7 /* AppDelegate.m in Sources */,
 				7964C8E0199B90750062E8A7 /* main.m in Sources */,
+				79480E2E19A4708400896957 /* PreferencesWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

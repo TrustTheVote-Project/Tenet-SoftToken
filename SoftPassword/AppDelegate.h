@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <NMSSH/NMSSH.h>
+#import "PreferencesWindow.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NMSSHChannelDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NMSSHChannelDelegate> {
+    PreferencesWindow *prefsWindow;
+}
 
-@property (assign) IBOutlet NSTextField *serverField;
-@property (assign) IBOutlet NSTextField *privateKeyPathField;
 @property (assign) IBOutlet NSButton *requestButton;
 @property (assign) IBOutlet NSSecureTextField *passphraseField;
 

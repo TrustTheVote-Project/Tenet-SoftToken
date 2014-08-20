@@ -11,38 +11,33 @@
 #import <NMSSH/NMSSHChannel.h>
 
 @interface AppDelegate ()
-            
 @property (nonatomic, retain) IBOutlet NSWindow *window;
-
-
 @end
+
+
 
 @implementation AppDelegate
             
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [self.serverField setStringValue:@"bb.noizeramp.com"];
-    [self.privateKeyPathField setStringValue:@""];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [prefsWindow release];
+    prefsWindow = nil;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
     return YES;
 }
 
-- (IBAction)onChangePrivateKey:(id)sender {
-    NSOpenPanel *dlg = [NSOpenPanel openPanel];
-    [dlg setCanChooseDirectories:NO];
-    [dlg setCanChooseFiles:YES];
-    [dlg setAllowsMultipleSelection:NO];
+- (IBAction)onPreferences:(id)sender {
+    NSLog(@"Calling preferences");
     
-    if ([dlg runModal] == NSOKButton) {
-        NSURL *url = [dlg URL];
-        
-        [self.privateKeyPathField setStringValue:[url path]];
+    if (prefsWindow == nil) {
+        prefsWindow = [[PreferencesWindow alloc] initWithWindowNibName:@"PreferencesWindow"];
     }
+
+    [prefsWindow showWindow:self];
 }
 
 - (IBAction)onRequestPassword:(id)sender {
@@ -55,9 +50,10 @@
 - (void)requestPassword {
     NSAutoreleasePool *pool = [NSAutoreleasePool new];
     
-    NSString *server     = [self.serverField stringValue];
+    NSUserDefaults *ud   = [NSUserDefaults standardUserDefaults];
+    NSString *server     = [ud objectForKey:@"serverAddress"];
     NSString *user       = @"otp";
-    NSString *privateKey = [self.privateKeyPathField stringValue];
+    NSString *privateKey = [ud objectForKey:@"privateKeyFile"];
     NSString *passphrase = [self.passphraseField stringValue];
     
     NMSSHSession *session = [NMSSHSession connectToHost:server withUsername:user];

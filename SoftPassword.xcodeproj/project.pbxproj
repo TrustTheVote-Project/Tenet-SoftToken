@@ -12,6 +12,8 @@
 		7964C8E5199B90750062E8A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7964C8E4199B90750062E8A7 /* Images.xcassets */; };
 		7964C8E8199B90750062E8A7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7964C8E6199B90750062E8A7 /* MainMenu.xib */; };
 		7964C8F4199B90760062E8A7 /* SoftPasswordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7964C8F3199B90760062E8A7 /* SoftPasswordTests.m */; };
+		7964C8FF199B90A20062E8A7 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7964C8FD199B90930062E8A7 /* NMSSH.framework */; };
+		7964C900199B90A20062E8A7 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7964C8FD199B90930062E8A7 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +24,28 @@
 			remoteGlobalIDString = 7964C8D9199B90750062E8A7;
 			remoteInfo = SoftPassword;
 		};
+		7964C906199BA0D30062E8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7964C8D2199B90750062E8A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7964C8D9199B90750062E8A7;
+			remoteInfo = SoftPassword;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7964C901199B90A20062E8A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7964C900199B90A20062E8A7 /* NMSSH.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7964C8DA199B90750062E8A7 /* SoftPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,10 +54,11 @@
 		7964C8E1199B90750062E8A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7964C8E2199B90750062E8A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7964C8E4199B90750062E8A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7964C8E7199B90750062E8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7964C8ED199B90750062E8A7 /* SoftPasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoftPasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7964C8F2199B90760062E8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7964C8F3199B90760062E8A7 /* SoftPasswordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoftPasswordTests.m; sourceTree = "<group>"; };
+		7964C8FD199B90930062E8A7 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMSSH.framework; sourceTree = "<group>"; };
+		79F52ACF199C8E14007A3E0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7964C8FF199B90A20062E8A7 /* NMSSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +83,7 @@
 		7964C8D1199B90750062E8A7 = {
 			isa = PBXGroup;
 			children = (
+				7964C8FD199B90930062E8A7 /* NMSSH.framework */,
 				7964C8DC199B90750062E8A7 /* SoftPassword */,
 				7964C8F0199B90750062E8A7 /* SoftPasswordTests */,
 				7964C8DB199B90750062E8A7 /* Products */,
@@ -121,6 +147,7 @@
 				7964C8D6199B90750062E8A7 /* Sources */,
 				7964C8D7199B90750062E8A7 /* Frameworks */,
 				7964C8D8199B90750062E8A7 /* Resources */,
+				7964C901199B90A20062E8A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,7 @@
 			);
 			dependencies = (
 				7964C8EF199B90750062E8A7 /* PBXTargetDependency */,
+				7964C907199BA0D30062E8A7 /* PBXTargetDependency */,
 			);
 			name = SoftPasswordTests;
 			productName = SoftPasswordTests;
@@ -231,13 +259,18 @@
 			target = 7964C8D9199B90750062E8A7 /* SoftPassword */;
 			targetProxy = 7964C8EE199B90750062E8A7 /* PBXContainerItemProxy */;
 		};
+		7964C907199BA0D30062E8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7964C8D9199B90750062E8A7 /* SoftPassword */;
+			targetProxy = 7964C906199BA0D30062E8A7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7964C8E6199B90750062E8A7 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7964C8E7199B90750062E8A7 /* Base */,
+				79F52ACF199C8E14007A3E0D /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -325,9 +358,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SoftPassword/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -336,9 +376,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SoftPassword/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -400,6 +447,7 @@
 				7964C8F9199B90760062E8A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7964C8FA199B90760062E8A7 /* Build configuration list for PBXNativeTarget "SoftPasswordTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +456,7 @@
 				7964C8FC199B90760062E8A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

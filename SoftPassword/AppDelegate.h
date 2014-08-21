@@ -7,21 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <NMSSH/NMSSH.h>
 #import "PreferencesWindow.h"
+#import "MainWindow.h"
+#import "ConfigurationWizard.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NMSSHChannelDelegate> {
-    PreferencesWindow *prefsWindow;
+
+@interface AppDelegate : NSObject <NSApplicationDelegate, ConfigurationWizardCallback> {
+    PreferencesWindow   *prefsWindow;
+    MainWindow          *mainWindow;
+    ConfigurationWizard *configurationWizard;
 }
-
-@property (assign) IBOutlet NSButton *requestButton;
-@property (assign) IBOutlet NSSecureTextField *passphraseField;
-
-@property (assign) IBOutlet NSTextField *passwordLabel;
-@property (assign) IBOutlet NSTextField *passwordField;
-
-@property (assign) IBOutlet NSTextField *errorLabel;
-@property (assign) IBOutlet NSTextField *errorMessageLabel;
 
 @end
 

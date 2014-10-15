@@ -40,7 +40,11 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="NCI-Zl-YSr" name="value" keyPath="values.serverAddress" id="8Gq-dZ-d5B"/>
+                            <binding destination="NCI-Zl-YSr" name="value" keyPath="values.serverAddress" id="uzA-ld-moE">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="hJv-QY-lbV">
@@ -61,7 +65,11 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="NCI-Zl-YSr" name="value" keyPath="values.privateKeyFile" id="wv6-gI-hN2"/>
+                            <binding destination="NCI-Zl-YSr" name="value" keyPath="values.privateKeyFile" id="nko-id-pz9">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <button verticalHuggingPriority="750" id="3pR-nb-ssY">

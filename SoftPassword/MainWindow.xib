@@ -7,8 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindow">
             <connections>
-                <outlet property="errorLabel" destination="tLa-Sp-KN3" id="hO2-Cd-2rY"/>
-                <outlet property="errorMessageLabel" destination="MlB-hz-0mY" id="FLe-28-smh"/>
+                <outlet property="errorLabel" destination="MlB-hz-0mY" id="8QZ-6I-8lY"/>
+                <outlet property="errorMessageLabel" destination="tLa-Sp-KN3" id="aCv-he-YHg"/>
                 <outlet property="passphraseField" destination="4PF-kR-1Bf" id="BUk-EO-dGh"/>
                 <outlet property="passwordField" destination="kdO-bS-Me3" id="G24-DM-2Ln"/>
                 <outlet property="passwordLabel" destination="bqy-bO-e7r" id="iG3-VP-Ofr"/>

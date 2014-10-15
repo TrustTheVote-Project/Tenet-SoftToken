@@ -14,7 +14,15 @@
 @implementation AppDelegate
             
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"configured"]) {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    // register defaults
+    [ud registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+                          @"", @"serverAddress",
+                          @"", @"privateKeyFile",
+                          nil]];
+
+    if ([ud boolForKey:@"configured"]) {
         [self showMainWindow];
     } else {
         [self showInitialConfigurationWizard];
